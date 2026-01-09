@@ -57,7 +57,8 @@ STEP=${1:-all}
 python data_preparation_hpc.py \
     --log-dir ./logs \
     --data-dir ../resources \
-    --step $STEP
+    --step $STEP \
+    --skip-downloads
 
 # Capture exit code
 EXIT_CODE=$?
