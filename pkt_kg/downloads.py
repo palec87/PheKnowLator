@@ -275,28 +275,31 @@ class OntData(DataSource):
 
         self.parses_resource_file()  # check data before download
         file_loc = '/'.join(self.data_path.split('/')[:-1]) + '/ontologies/'
-        log_str = '***Downloading Data: {0} to "{1}" ***'.format(self.data_type, file_loc)
-        print('\n' + log_str + '\n'); logger.info(log_str)
+        log_str = '***Downloading Data: {0} to "{1}"***'.format(self.data_type, file_loc)
+        
 
         for i in tqdm(self.source_list.keys()):
             source = self.source_list[i]; file_prefix = source.split('/')[-1].split('.')[0]
             write_loc = file_loc + file_prefix
             log_str = 'Downloading: {}'.format(str(file_prefix)); print('\n' + log_str); logger.info(log_str)
             # don't re-download ontologies
+            print(os.listdir(file_loc), file_prefix)
             if any(x for x in os.listdir(file_loc) if file_prefix == x.split('.')[0]):
+                print('Just copying: \n' + log_str + '\n',glob.glob(file_loc + '*' + file_prefix + '*')[0]); logger.info(log_str)
                 self.data_files[i] = glob.glob(file_loc + '*' + file_prefix + '*')[0]
             else:
+                print('\n' + log_str + '\n'); logger.info(log_str)
                 if 'purl' in source and 'https://storage.googleapis.com/pheknowlator' not in source:
                     try:
                         subprocess.check_call([owltools_location, str(source), '--merge-import-closure',
-                                               '-o', str(write_loc) + '_with_imports.owl'])
-                        self.data_files[i] = str(write_loc) + '_with_imports.owl'
+                                               '-o', str(write_loc) + '.owl'])
+                        self.data_files[i] = str(write_loc) + '.owl'
                     except subprocess.CalledProcessError as error:
                         logger.error('Error: {}'.format(error.output))
                         raise Exception('{}'.format(error.output))
                 else:
-                    data_downloader(source, file_loc, str(file_prefix) + '_with_imports.owl')
-                    self.data_files[i] = file_loc + str(file_prefix) + '_with_imports.owl'
+                    data_downloader(source, file_loc, str(file_prefix) + '.owl')
+                    self.data_files[i] = file_loc + str(file_prefix) + '.owl'
             stats = gets_ontology_statistics(self.data_files[i], owltools_location); print(stats); logger.info(stats)
         self.generates_source_metadata()
 
@@ -357,8 +360,10 @@ class LinkedData(DataSource):
                 try: shutil.copy(glob.glob(write_path + '*' + file_name)[0], write_path + i + '_' + file_name)
                 except shutil.SameFileError:
                     logger.error('{}'.format(shutil.SameFileError)); pass
+                print('Just copying: \n' + log_str + '\n'); logger.info(log_str)
             else:
                 self.data_files[i] = write_path + i + '_' + file_name
+                print('\n' + log_str + '\n'); logger.info(log_str)
                 data_downloader(source, write_path, i + '_' + file_name)
         self.generates_source_metadata()
 

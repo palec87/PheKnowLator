@@ -138,28 +138,57 @@ def gzipped_ftp_url_download(url: str, write_location: str, filename: str) -> No
     return None
 
 
-def zipped_url_download(url: str, write_location: str, filename: str = '') -> None:
-    """Downloads a zipped file from a URL.
+# def zipped_url_download(url: str, write_location: str, filename: str = '') -> None:
+#     """Downloads a zipped file from a URL.
+
+#     Args:
+#         url: A string that points to the location of a temp mapping file that needs to be processed.
+#         write_location: A string that points to a file directory.
+#         filename: A string containing a filepath for where to write data to.
+
+#     Returns:
+#         None.
+#     """
+
+#     print('Downloading Zipped Data from {}'.format(url))
+
+#     with requests.get(url, allow_redirects=True) as zip_data:
+#         with ZipFile(BytesIO(zip_data.content)) as zip_file:    # type: ignore
+#             zip_file.extractall(write_location[:-1])
+#     zip_data.close()    # type: ignore
+#     if filename != '': os.rename(write_location + re.sub(zip_pat, '', url.split('/')[-1]), write_location + filename)
+
+#     return None
+
+
+from urllib.parse import urlparse
+from pathlib import Path
+def zipped_url_download(
+    url: str,
+    write_location: str,
+) -> None:
+    """Download and extract a zipped file from a URL.
 
     Args:
-        url: A string that points to the location of a temp mapping file that needs to be processed.
-        write_location: A string that points to a file directory.
-        filename: A string containing a filepath for where to write data to.
-
-    Returns:
-        None.
+        url: URL pointing to a zip file (may include query params).
+        write_location: Directory where contents will be extracted.
+        filename: Optional final filename to rename the extracted file to.
     """
 
-    print('Downloading Zipped Data from {}'.format(url))
+    print(f"Downloading zipped data from {url}")
 
-    with requests.get(url, allow_redirects=True) as zip_data:
-        with ZipFile(BytesIO(zip_data.content)) as zip_file:    # type: ignore
-            zip_file.extractall(write_location[:-1])
-    zip_data.close()    # type: ignore
-    if filename != '': os.rename(write_location + re.sub(zip_pat, '', url.split('/')[-1]), write_location + filename)
+    write_location = Path(write_location)
+    write_location.mkdir(parents=True, exist_ok=True)
 
-    return None
+    # Extract clean filename from URL (no ?query)
+    parsed = urlparse(url)
+    original_name = Path(parsed.path).name
 
+    with requests.get(url, allow_redirects=True) as response:
+        response.raise_for_status()
+        with ZipFile(BytesIO(response.content)) as zip_file:
+            zip_file.extractall(write_location)
+        
 
 def gzipped_url_download(url: str, write_location: str, filename: str) -> None:
     """Downloads a gzipped file from a URL.
