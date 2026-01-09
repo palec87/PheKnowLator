@@ -1,5 +1,5 @@
 ===================================
-#Sun Jan 10 07:51:01 UTC 2021 
+#Thu Jan 08 15:37:10 UTC 2026 
 ===================================
 
 EDGE: phenotype
@@ -8,9 +8,9 @@ DATA PROCESSING INFO
   - FILTERING CRITERIA = None
   - EVIDENCE CRITERIA = None
 DATA INFO
-  - DOWNLOAD_URL = http://purl.obolibrary.org/obo/hp.owl
-  - DOWNLOAD_DATE = 01/10/2021
-  - FILE_SIZE_IN_BYTES = 86049594
+  - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/hp_with_imports.owl
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 84205700
   - DOWNLOADED_FILE_LOCATION = resources/ontologies/hp_with_imports.owl
 
 EDGE: go
@@ -19,9 +19,9 @@ DATA PROCESSING INFO
   - FILTERING CRITERIA = None
   - EVIDENCE CRITERIA = None
 DATA INFO
-  - DOWNLOAD_URL = http://purl.obolibrary.org/obo/go.owl
-  - DOWNLOAD_DATE = 01/10/2021
-  - FILE_SIZE_IN_BYTES = 158595338
+  - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/go_with_imports.owl
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 122488692
   - DOWNLOADED_FILE_LOCATION = resources/ontologies/go_with_imports.owl
 
 EDGE: disease
@@ -30,9 +30,9 @@ DATA PROCESSING INFO
   - FILTERING CRITERIA = None
   - EVIDENCE CRITERIA = None
 DATA INFO
-  - DOWNLOAD_URL = http://purl.obolibrary.org/obo/mondo.owl
-  - DOWNLOAD_DATE = 01/10/2021
-  - FILE_SIZE_IN_BYTES = 231114807
+  - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/mondo_with_imports.owl
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 231020989
   - DOWNLOADED_FILE_LOCATION = resources/ontologies/mondo_with_imports.owl
 
 EDGE: vaccine
@@ -41,9 +41,9 @@ DATA PROCESSING INFO
   - FILTERING CRITERIA = None
   - EVIDENCE CRITERIA = None
 DATA INFO
-  - DOWNLOAD_URL = http://purl.obolibrary.org/obo/vo.owl
-  - DOWNLOAD_DATE = 01/10/2021
-  - FILE_SIZE_IN_BYTES = 8140082
+  - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/vo_with_imports.owl
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 8388461
   - DOWNLOADED_FILE_LOCATION = resources/ontologies/vo_with_imports.owl
 
 EDGE: chemical
@@ -52,9 +52,9 @@ DATA PROCESSING INFO
   - FILTERING CRITERIA = None
   - EVIDENCE CRITERIA = None
 DATA INFO
-  - DOWNLOAD_URL = http://purl.obolibrary.org/obo/chebi.owl
-  - DOWNLOAD_DATE = 01/10/2021
-  - FILE_SIZE_IN_BYTES = 592367801
+  - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/chebi_with_imports.owl
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 643473711
   - DOWNLOADED_FILE_LOCATION = resources/ontologies/chebi_with_imports.owl
 
 EDGE: anatomy
@@ -63,9 +63,9 @@ DATA PROCESSING INFO
   - FILTERING CRITERIA = None
   - EVIDENCE CRITERIA = None
 DATA INFO
-  - DOWNLOAD_URL = http://purl.obolibrary.org/obo/uberon/ext.owl
-  - DOWNLOAD_DATE = 01/10/2021
-  - FILE_SIZE_IN_BYTES = 75793278
+  - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/ext_with_imports.owl
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 64227360
   - DOWNLOADED_FILE_LOCATION = resources/ontologies/ext_with_imports.owl
 
 EDGE: cell
@@ -74,9 +74,9 @@ DATA PROCESSING INFO
   - FILTERING CRITERIA = None
   - EVIDENCE CRITERIA = None
 DATA INFO
-  - DOWNLOAD_URL = http://purl.obolibrary.org/obo/clo.owl
-  - DOWNLOAD_DATE = 01/10/2021
-  - FILE_SIZE_IN_BYTES = 122290057
+  - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/clo_with_imports.owl
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 122349569
   - DOWNLOADED_FILE_LOCATION = resources/ontologies/clo_with_imports.owl
 
 EDGE: protein
@@ -85,9 +85,9 @@ DATA PROCESSING INFO
   - FILTERING CRITERIA = None
   - EVIDENCE CRITERIA = None
 DATA INFO
-  - DOWNLOAD_URL = http://purl.obolibrary.org/obo/pr.owl
-  - DOWNLOAD_DATE = 01/10/2021
-  - FILE_SIZE_IN_BYTES = 217990574
+  - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/pr_with_imports.owl
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 217870791
   - DOWNLOADED_FILE_LOCATION = resources/ontologies/pr_with_imports.owl
 
 EDGE: genomic
@@ -96,9 +96,9 @@ DATA PROCESSING INFO
   - FILTERING CRITERIA = None
   - EVIDENCE CRITERIA = None
 DATA INFO
-  - DOWNLOAD_URL = http://purl.obolibrary.org/obo/so.owl
-  - DOWNLOAD_DATE = 01/10/2021
-  - FILE_SIZE_IN_BYTES = 4866009
+  - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/so_with_imports.owl
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 4890370
   - DOWNLOADED_FILE_LOCATION = resources/ontologies/so_with_imports.owl
 
 EDGE: pathway
@@ -107,9 +107,9 @@ DATA PROCESSING INFO
   - FILTERING CRITERIA = None
   - EVIDENCE CRITERIA = None
 DATA INFO
-  - DOWNLOAD_URL = http://purl.obolibrary.org/obo/pw.owl
-  - DOWNLOAD_DATE = 01/10/2021
-  - FILE_SIZE_IN_BYTES = 4937325
+  - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/pw_with_imports.owl
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 4915785
   - DOWNLOADED_FILE_LOCATION = resources/ontologies/pw_with_imports.owl
 
 EDGE: relation
@@ -118,8 +118,8 @@ DATA PROCESSING INFO
   - FILTERING CRITERIA = None
   - EVIDENCE CRITERIA = None
 DATA INFO
-  - DOWNLOAD_URL = http://purl.obolibrary.org/obo/ro.owl
-  - DOWNLOAD_DATE = 01/10/2021
-  - FILE_SIZE_IN_BYTES = 845100
+  - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/ro_with_imports.owl
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 857709
   - DOWNLOADED_FILE_LOCATION = resources/ontologies/ro_with_imports.owl
 

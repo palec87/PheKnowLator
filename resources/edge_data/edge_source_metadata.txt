@@ -1,5 +1,5 @@
 ===================================
-#Wed Jan 27 04:45:45 UTC 2021 
+#Thu Jan 08 15:37:50 UTC 2026 
 ===================================
 
 EDGE: chemical-disease
@@ -9,52 +9,52 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = data[5]!=''
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/CTD_chemicals_diseases.tsv
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 662525557
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 701201197
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
 
 EDGE: chemical-gene
 DATA PROCESSING INFO
   - IDENTIFIER MAPPING = chemical (./resources/processed_data/MESH_CHEBI_MAP.txt)
   - FILTERING CRITERIA = data[6]==Homo sapiens | data[5].startswith('gene')
-  - EVIDENCE CRITERIA = None
+  - EVIDENCE CRITERIA = data[9]affectsnot in x
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/CTD_chem_gene_ixns.tsv
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 416240734
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 441097103
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-gene_CTD_chem_gene_ixns.tsv
 
 EDGE: chemical-gobp
 DATA PROCESSING INFO
   - IDENTIFIER MAPPING = chemical (./resources/processed_data/MESH_CHEBI_MAP.txt)
   - FILTERING CRITERIA = data[3]==Biological Process
-  - EVIDENCE CRITERIA = data[8]<0.0001
+  - EVIDENCE CRITERIA = data[8]<=1.04e-47
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/CTD_chem_go_enriched.tsv
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 788894015
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 817733569
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-gobp_CTD_chem_go_enriched.tsv
 
 EDGE: chemical-gocc
 DATA PROCESSING INFO
   - IDENTIFIER MAPPING = chemical (./resources/processed_data/MESH_CHEBI_MAP.txt)
   - FILTERING CRITERIA = data[3]==Cellular Component
-  - EVIDENCE CRITERIA = data[8]<0.0001
+  - EVIDENCE CRITERIA = data[8]<=1.04e-47
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/CTD_chem_go_enriched.tsv
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 788894015
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 817733569
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-gocc_CTD_chem_go_enriched.tsv
 
 EDGE: chemical-gomf
 DATA PROCESSING INFO
   - IDENTIFIER MAPPING = chemical (./resources/processed_data/MESH_CHEBI_MAP.txt)
   - FILTERING CRITERIA = data[3]==Molecular Function
-  - EVIDENCE CRITERIA = data[8]<0.0001
+  - EVIDENCE CRITERIA = data[8]<=1.04e-47
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/CTD_chem_go_enriched.tsv
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 788894015
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 817733569
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-gomf_CTD_chem_go_enriched.tsv
 
 EDGE: chemical-pathway
@@ -64,8 +64,8 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/ChEBI2Reactome_All_Levels.txt
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 29342364
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 30485396
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-pathway_ChEBI2Reactome_All_Levels.txt
 
 EDGE: chemical-phenotype
@@ -75,31 +75,20 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = data[5]!=''
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/CTD_chemicals_diseases.tsv
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 662525557
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 701201197
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-phenotype_CTD_chemicals_diseases.tsv
 
 EDGE: chemical-protein
 DATA PROCESSING INFO
   - IDENTIFIER MAPPING = chemical (./resources/processed_data/MESH_CHEBI_MAP.txt) | protein (./resources/processed_data/ENTREZ_GENE_PRO_ONTOLOGY_MAP.txt)
   - FILTERING CRITERIA = data[6]==Homo sapiens | data[5] .startswith('protein') 
-  - EVIDENCE CRITERIA = None
+  - EVIDENCE CRITERIA = data[9]affectsnot in x
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/CTD_chem_gene_ixns.tsv
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 416240734
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 441097103
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-protein_CTD_chem_gene_ixns.tsv
-
-EDGE: chemical-rna
-DATA PROCESSING INFO
-  - IDENTIFIER MAPPING = chemical (./resources/processed_data/MESH_CHEBI_MAP.txt) | rna (./resources/processed_data/GENE_SYMBOL_ENSEMBL_TRANSCRIPT_MAP.txt)
-  - FILTERING CRITERIA = data[6]==Homo sapiens | data[5].startswith('mRNA')
-  - EVIDENCE CRITERIA = None
-DATA INFO
-  - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/CTD_chem_gene_ixns.tsv
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 416240734
-  - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-rna_CTD_chem_gene_ixns.tsv
 
 EDGE: disease-phenotype
 DATA PROCESSING INFO
@@ -107,19 +96,19 @@ DATA PROCESSING INFO
   - FILTERING CRITERIA = None
   - EVIDENCE CRITERIA = None
 DATA INFO
-  - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/phenotype_annotation.tab
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 25605489
-  - DOWNLOADED_FILE_LOCATION = resources/edge_data/disease-phenotype_phenotype_annotation.tab
+  - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/phenotype.hpoa
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 27315334
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/disease-phenotype_phenotype.hpoa
 
 EDGE: gene-disease
 DATA PROCESSING INFO
   - IDENTIFIER MAPPING = disease (./resources/processed_data/DISEASE_MONDO_MAP.txt)
   - FILTERING CRITERIA = None
-  - EVIDENCE CRITERIA = data[10]>=0.70
+  - EVIDENCE CRITERIA = data[10]>=1.0
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/curated_gene_disease_associations.tsv
-  - DOWNLOAD_DATE = 01/26/2021
+  - DOWNLOAD_DATE = 01/08/2026
   - FILE_SIZE_IN_BYTES = 11542996
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/gene-disease_curated_gene_disease_associations.tsv
 
@@ -127,11 +116,11 @@ EDGE: gene-gene
 DATA PROCESSING INFO
   - IDENTIFIER MAPPING = gene (./resources/processed_data/ENSEMBL_GENE_ENTREZ_GENE_MAP.txt) | gene (./resources/processed_data/ENSEMBL_GENE_ENTREZ_GENE_MAP.txt)
   - FILTERING CRITERIA = None
-  - EVIDENCE CRITERIA = data[2]>=0.00012
+  - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/COMBINED.DEFAULT_NETWORKS.BP_COMBINING.txt
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 270656653
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 246190113
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/gene-gene_COMBINED.DEFAULT_NETWORKS.BP_COMBINING.txt
 
 EDGE: gene-pathway
@@ -141,30 +130,30 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/CTD_genes_pathways.tsv
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 8194289
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 8192661
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/gene-pathway_CTD_genes_pathways.tsv
 
 EDGE: gene-phenotype
 DATA PROCESSING INFO
   - IDENTIFIER MAPPING = phenotype (./resources/processed_data/PHENOTYPE_HPO_MAP.txt)
   - FILTERING CRITERIA = None
-  - EVIDENCE CRITERIA = data[10]>=0.70
+  - EVIDENCE CRITERIA = data[10]>=1.0
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/curated_gene_disease_associations.tsv
-  - DOWNLOAD_DATE = 01/26/2021
+  - DOWNLOAD_DATE = 01/08/2026
   - FILE_SIZE_IN_BYTES = 11542996
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/gene-phenotype_curated_gene_disease_associations.tsv
 
 EDGE: gene-protein
 DATA PROCESSING INFO
   - IDENTIFIER MAPPING = None
-  - FILTERING CRITERIA = data[2]==protein-coding
+  - FILTERING CRITERIA = data[4]==protein-coding
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/ENTREZ_GENE_PRO_ONTOLOGY_MAP.txt
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 2433182
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 1124944
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/gene-protein_ENTREZ_GENE_PRO_ONTOLOGY_MAP.txt
 
 EDGE: gene-rna
@@ -174,8 +163,8 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/ENTREZ_GENE_ENSEMBL_TRANSCRIPT_MAP.txt
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 12996836
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 15146432
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/gene-rna_ENTREZ_GENE_ENSEMBL_TRANSCRIPT_MAP.txt
 
 EDGE: gobp-pathway
@@ -185,8 +174,8 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/gene_association.reactome
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 12615150
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 11955743
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/gobp-pathway_gene_association.reactome
 
 EDGE: pathway-gocc
@@ -196,8 +185,8 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/gene_association.reactome
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 12615150
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 11955743
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/pathway-gocc_gene_association.reactome
 
 EDGE: pathway-gomf
@@ -207,8 +196,8 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/gene_association.reactome
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 12615150
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 11955743
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/pathway-gomf_gene_association.reactome
 
 EDGE: protein-anatomy
@@ -218,7 +207,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
-  - DOWNLOAD_DATE = 01/26/2021
+  - DOWNLOAD_DATE = 01/08/2026
   - FILE_SIZE_IN_BYTES = 20611429
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-anatomy_HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
 
@@ -229,8 +218,8 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/UNIPROT_PROTEIN_CATALYST.txt
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 1583158
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 1639479
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-catalyst_UNIPROT_PROTEIN_CATALYST.txt
 
 EDGE: protein-cell
@@ -240,7 +229,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
-  - DOWNLOAD_DATE = 01/26/2021
+  - DOWNLOAD_DATE = 01/08/2026
   - FILE_SIZE_IN_BYTES = 20611429
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-cell_HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
 
@@ -251,8 +240,8 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/UNIPROT_PROTEIN_COFACTOR.txt
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 174816
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 179314
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-cofactor_UNIPROT_PROTEIN_COFACTOR.txt
 
 EDGE: protein-gobp
@@ -262,8 +251,8 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/goa_human.gaf
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 103225127
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 109325311
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-gobp_goa_human.gaf
 
 EDGE: protein-gocc
@@ -273,8 +262,8 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/goa_human.gaf
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 103225127
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 109325311
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-gocc_goa_human.gaf
 
 EDGE: protein-gomf
@@ -284,8 +273,8 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/goa_human.gaf
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 103225127
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 109325311
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-gomf_goa_human.gaf
 
 EDGE: protein-pathway
@@ -295,8 +284,8 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/UniProt2Reactome_All_Levels.txt
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 102386977
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 102191227
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-pathway_UniProt2Reactome_All_Levels.txt
 
 EDGE: protein-protein
@@ -306,7 +295,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = data[2]>=700
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/original_data/9606.protein.links.v11.0.txt
-  - DOWNLOAD_DATE = 01/26/2021
+  - DOWNLOAD_DATE = 01/08/2026
   - FILE_SIZE_IN_BYTES = 540934917
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-protein_9606.protein.links.v11.0.txt
 
@@ -317,7 +306,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
-  - DOWNLOAD_DATE = 01/26/2021
+  - DOWNLOAD_DATE = 01/08/2026
   - FILE_SIZE_IN_BYTES = 20611429
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/rna-anatomy_HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
 
@@ -328,51 +317,51 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
-  - DOWNLOAD_DATE = 01/26/2021
+  - DOWNLOAD_DATE = 01/08/2026
   - FILE_SIZE_IN_BYTES = 20611429
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/rna-cell_HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
 
 EDGE: rna-protein
 DATA PROCESSING INFO
   - IDENTIFIER MAPPING = None
-  - FILTERING CRITERIA = data[2]==protein-coding
+  - FILTERING CRITERIA = data[4]==protein-coding
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/ENSEMBL_TRANSCRIPT_PROTEIN_ONTOLOGY_MAP.txt
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 5970076
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 2931638
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/rna-protein_ENSEMBL_TRANSCRIPT_PROTEIN_ONTOLOGY_MAP.txt
 
 EDGE: variant-disease
 DATA PROCESSING INFO
   - IDENTIFIER MAPPING = disease (./resources/processed_data/DISEASE_MONDO_MAP.txt)
   - FILTERING CRITERIA = data[9]!=-1 | data[16]==GRCh38 | data[8-9]dedupdesc
-  - EVIDENCE CRITERIA = data[24] in ["criteria provided, multiple submitters, no conflicts", "reviewed by expert panel", "practice guideline", "criteria provided, single submitter"] | data[7]==1
+  - EVIDENCE CRITERIA = data[24] in ["criteria provided, multiple submitters, no conflicts", "reviewed by expert panel", "practice guideline"] | data[7]==1
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 0
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 3662353455
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/variant-disease_CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
 
 EDGE: variant-gene
 DATA PROCESSING INFO
   - IDENTIFIER MAPPING = None
-  - FILTERING CRITERIA = data[9]!=-1 | data[16]==GRCh38 | data[8-9]dedupdesc
-  - EVIDENCE CRITERIA = data[24] in ["criteria provided, multiple submitters, no conflicts", "reviewed by expert panel", "practice guideline", "criteria provided, single submitter"]
+  - FILTERING CRITERIA = data[9]!=-1 | data[3]!=-1 | data[16]==GRCh38 | data[8-9]dedupdesc
+  - EVIDENCE CRITERIA = data[24] in ["criteria provided, multiple submitters, no conflicts", "reviewed by expert panel", "practice guideline"]
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 0
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 3662353455
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/variant-gene_CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
 
 EDGE: variant-phenotype
 DATA PROCESSING INFO
   - IDENTIFIER MAPPING = phenotype (./resources/processed_data/PHENOTYPE_HPO_MAP.txt)
   - FILTERING CRITERIA = data[9]!=-1 | data[16]==GRCh38 | data[8-9]dedupdesc
-  - EVIDENCE CRITERIA = data[24] in ["criteria provided, multiple submitters, no conflicts", "reviewed by expert panel", "practice guideline", "criteria provided, single submitter"] | data[7]==1
+  - EVIDENCE CRITERIA = data[24] in ["criteria provided, multiple submitters, no conflicts", "reviewed by expert panel", "practice guideline"] | data[7]==1
 DATA INFO
   - DOWNLOAD_URL = https://storage.googleapis.com/pheknowlator/current_build/data/processed_data/CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
-  - DOWNLOAD_DATE = 01/26/2021
-  - FILE_SIZE_IN_BYTES = 0
+  - DOWNLOAD_DATE = 01/08/2026
+  - FILE_SIZE_IN_BYTES = 3662353455
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/variant-phenotype_CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
 

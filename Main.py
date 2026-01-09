@@ -13,6 +13,22 @@ from pkt_kg.downloads import OntData, LinkedData
 from pkt_kg.edge_list import CreatesEdgeList
 from pkt_kg.knowledge_graph import FullBuild, PartialBuild, PostClosureBuild
 
+os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-11-openjdk-amd64"
+os.environ["PATH"] = f"{os.environ['JAVA_HOME']}/bin:" + os.environ["PATH"]
+
+"""
+my command
+python -m Main.py -g resources/ontology_source_list.txt \
+    -e resources/edge_source_list.txt \
+    -a instance \
+    -t resources/resource_info.txt \
+    -b full \
+    -r no \
+    -s yes \
+    -m no \
+    -o resources/knowledge_graphs/
+"""
+
 
 def main():
     parser = argparse.ArgumentParser(description=('PheKnowLator: This program builds a biomedical knowledge graph using'
@@ -75,7 +91,21 @@ def main():
     end = time.time(); timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print('\nPKT: TOTAL SECONDS TO BUILD THE MASTER EDGE LIST: {} @ {}'.format(end - start, timestamp))
 
+    # report memory usage
+    process = psutil.Process(os.getpid())
+    print('\nPKT: MEMORY USAGE AFTER EDGE LIST CREATION: {} GB\n'.format(process.memory_info().rss / 1e9))
+
     del ont, ent, master_edges  # clean up environment before build knowledge graph
+
+    # delete other variables if needed
+    import gc
+    gc.collect()
+
+    del combined_edges, process
+    gc.collect()
+    process = psutil.Process(os.getpid())
+    print('\nPKT: MEMORY USAGE AFTER EDGE LIST CREATION: {} GB\n'.format(process.memory_info().rss / 1e9))
+
 
     #########################
     # BUILD KNOWLEDGE GRAPH #
